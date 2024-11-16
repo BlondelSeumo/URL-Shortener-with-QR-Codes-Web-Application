@@ -1,0 +1,212 @@
+/* Overriding bootstrap defaults */
+$primary-50: hsl(217, 100%, 97%);
+$primary-100: hsla(217, 90%, 93%, 1);
+$primary-200: hsla(217, 90%, 84%, 1);
+$primary-300: hsla(217, 90%, 75%, 1);
+$primary-400: hsla(217, 90%, 69%, 1);
+$primary: hsl(217, 98%, 62%);
+$primary-600: hsla(217, 80%, 53%, 1);
+$primary-700: hsla(217, 80%, 45%, 1);
+$primary-800: hsla(217, 80%, 25%, 1);
+$primary-900: hsla(217, 80%, 15%, 1);
+
+$gray-50: hsl(204, 50%, 99%) !default;
+$gray-100: hsl(204, 45%, 97%) !default;
+$gray-200: hsl(210, 38%, 93%) !default;
+$gray-300: hsl(214, 32%, 88%) !default;
+$gray-400: hsl(211, 25%, 81%) !default;
+$gray-500: hsl(214, 20%, 66%) !default;
+$gray-600: hsl(216, 15%, 50%) !default;
+$gray-700: hsl(218, 17%, 33%) !default;
+$gray-800: hsl(218, 23%, 22%) !default;
+$gray-900: hsl(220, 26%, 13%) !default;
+
+$theme-colors: (
+    "gray-50": $gray-50,
+    "gray-100": $gray-100,
+    "gray-200": $gray-200,
+    "gray-300": $gray-300,
+    "gray-400": $gray-400,
+    "gray-500": $gray-500,
+    "gray-600": $gray-600,
+    "gray-700": $gray-700,
+    "gray-800": $gray-800,
+    "gray-900": $gray-900,
+
+    "primary-100": $primary-100,
+    "primary-200": $primary-200,
+    "primary-300": $primary-300,
+    "primary-400": $primary-400,
+    "primary-600": $primary-600,
+    "primary-700": $primary-700,
+    "primary-800": $primary-800,
+    "primary-900": $primary-900
+);
+
+$spacer: 1rem;
+$spacers: (
+        0: 0,
+        1: ($spacer * .25),
+        2: ($spacer * .5),
+        3: $spacer,
+        4: ($spacer * 1.5),
+        5: ($spacer * 3),
+        6: ($spacer * 4),
+        7: ($spacer * 5),
+        8: ($spacer * 6),
+        9: ($spacer * 8),
+        10: ($spacer * 10)
+);
+
+/* Overriding */
+$body-bg: hsl(209, 20%, 97%);
+$body-color: $gray-900;
+$black: hsl(220, 3%, 2%);
+
+/* Code */
+$code-color: $primary;
+
+/* Border */
+$border-radius: .4rem;
+
+/* Dropdown */
+$dropdown-padding-x: .5rem;
+$dropdown-padding-y: .5rem;
+$dropdown-item-padding-y: .5rem;
+$dropdown-border-color: $gray-100;
+$dropdown-divider-bg: $gray-100;
+
+$list-group-border-color: $gray-100;
+
+/* Alerts */
+$alert-border-width: 0;
+
+/* Card */
+$card-border-width: 0;
+$card-spacer-y: 1.5rem;
+$card-spacer-x: 1.5rem;
+
+/* Shadows */
+$box-shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+$box-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$box-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$box-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+$box-shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+$box-shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+
+/* Pagination */
+$pagination-bg: $gray-100;
+$pagination-disabled-bg: $gray-100;
+$pagination-border-width: 0;
+$pagination-hover-bg: $gray-200;
+$pagination-padding-y: .75rem;
+$pagination-padding-x: .95rem;
+
+/* Inputs */
+$input-border-color: $gray-200;
+$input-color: $gray-700;
+$input-placeholder-color: $gray-500;
+$input-btn-padding-y: .45rem;
+$input-btn-padding-x: .75rem;
+$form-group-margin-bottom: 1.5rem;
+$input-group-addon-bg: $gray-100;
+
+/* Blockquote footer */
+$blockquote-small-color: $gray-800;
+
+/* Small font size */
+$small-font-size: 80%;
+
+/* Tooltips */
+$tooltip-padding-y: .6rem;
+$tooltip-padding-x: .9rem;
+
+/* Navbar color contrast compliance fixes */
+$navbar-dark-color:                 $gray-600;
+$navbar-dark-hover-color:           $gray-700;
+$navbar-light-color:                $gray-600;
+$navbar-light-hover-color:          $gray-700;
+
+@import "./bootstrap/bootstrap";
+
+/* Forms */
+label {
+    font-size: .9rem;
+    font-weight: 500;
+    margin-bottom: .375rem;
+}
+
+/* Dropdown */
+.dropdown-toggle-simple::after {
+    display:none;
+}
+
+.dropdown-item > svg {
+    color: $gray-700;
+}
+
+.dropdown-item:focus > svg {
+    color: inherit;
+}
+
+/* Animate dropdown menu */
+.dropdown .dropdown-menu{
+    animation-name: opacityIn;
+    animation-duration: .15s;
+}
+
+@keyframes opacityIn {
+    from { opacity: .3; }
+    to { opacity: 1; }
+}
+
+/* Nav pills */
+.nav-pills {
+    .nav-link {
+        color: $gray-800;
+    }
+}
+
+/* Code */
+code {
+    background: $primary-100;
+    border-radius: $border-radius;
+    padding: .15rem .4rem;
+}
+
+/* Buttons */
+.btn {
+    border-style: solid;
+}
+
+/* D flex text truncate fix */
+.min-width-0 {
+    min-width: 0;
+}
+
+/* Tooltip fix */
+.tooltip { top: 0; }
+
+/* Custom switches */
+.custom-control-label::before {
+    border: 0;
+    background: #{$gray-200};
+}
+.custom-control-input[disabled]~.custom-control-label::before, .custom-control-input:disabled~.custom-control-label::before {
+    background: #{$gray-300};
+}
+
+/* Extra variables */
+:root {
+    --black: #{$black};
+    --body-bg: #{$body-bg};
+    --body-color: #{$body-color};
+    --border-radius: #{$border-radius};
+    --input-border-color: #{$input-border-color};
+    --input-color: #{$input-color};
+    --input-placeholder-color: #{$input-placeholder-color};
+    --input-padding-y: #{$input-btn-padding-y};
+    --input-padding-x: #{$input-btn-padding-x};
+    --input-font-size: #{$input-font-size};
+    --card-padding: #{$card-spacer-x};
+}

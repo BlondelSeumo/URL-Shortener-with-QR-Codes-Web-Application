@@ -1,0 +1,153 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+}
+
+/* HEADER */
+.header {
+    background: #161938;
+    color: white;
+}
+
+.header .subheader {
+    font-size: .8rem;
+    margin: 0;
+}
+
+
+.header .subheader a {
+    color: white;
+}
+
+.header .logo {
+    width: 85px;
+}
+
+/* MAIN */
+.main {
+    margin-top: 3rem;
+}
+/* MAIN SIDEBAR */
+.main .sidebar-nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 1rem;
+}
+
+.main .sidebar {
+    list-style: none;
+    padding-left: 0;
+}
+
+.main .sidebar li {
+}
+
+.main .sidebar li a {
+    padding: .5rem .75rem;
+    color: #373737;
+    transition: color .3s ease;
+}
+
+.main .sidebar li a:hover {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.main .sidebar li a.active {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.main .sidebar-sub {
+    list-style: none;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.main .sidebar-sub li {
+    margin-bottom: 0;
+}
+
+.main .sidebar-sub li a {
+    font-size: .9rem;
+}
+
+/* MAIN CONTENT */
+.main #content {
+}
+
+.main .block {
+    margin: 2.5rem 0;
+}
+
+.main .block li {
+    margin-bottom: .5rem;
+}
+
+.main .img-icon {
+    width: 20px
+}
+
+/* ^_^ */
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.65rem;
+}
+
+h3 {
+    font-size: 1.35rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+p {
+    color: var(--gray-700);
+}
+
+/* Tables */
+.table-custom-container {
+    border-radius: .4rem;
+    border: 1px solid var(--gray-100);
+}
+
+.table-custom {
+    margin-bottom: 0;
+    background: var(--white);
+}
+
+.table-custom thead th {
+    border-top: 0;
+    border-bottom: 0;
+    color: var(--gray-900);
+    background: var(--gray-50);
+}
+
+.table-custom th {
+    padding: 1.25rem 1.25rem;
+    font-size: .9rem;
+}
+
+.table-custom tbody tr {
+    border-top: 1px solid var(--gray-100);
+}
+
+.table-custom td {
+    padding: 1.25rem 1.25rem;
+    vertical-align: middle;
+}
+
+.table-custom tbody tr td {
+    border-top: 0;
+}
+
+.table-custom tbody tr {
+    transition: all .3s ease-in-out;
+}

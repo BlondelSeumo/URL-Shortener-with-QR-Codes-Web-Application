@@ -1,0 +1,326 @@
+.link-html {
+    height: 100%;
+}
+
+.link-body {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    min-height: 100%;
+}
+
+.link-video-background {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.link-body-backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.link-content {
+    padding-top: 2rem;
+}
+
+.link-image {
+    width: 125px;
+    height: 125px;
+    object-fit: contain;
+}
+
+.link-verified {
+    border: 2px solid #fff;
+    border-radius: 50rem;
+    padding: 0.35rem 0.55rem;
+    background: #0086ff;
+    color: #fff;
+    font-weight: bold;
+}
+
+.link-verified-small {
+    color: #0086ff;
+    vertical-align: text-top;
+}
+
+.link-verified-small .fa-stack {
+    font-size: .80rem;
+}
+
+.link-btn {
+    position: relative;
+    white-space: normal;
+    word-wrap: break-word;
+    padding: 1rem 4.5rem;
+    font-size: 1.1rem;
+    transition: opacity 0.3s, background 0.3s;
+    border-radius: 0;
+}
+
+.link-btn:hover {
+    animation: none;
+}
+
+.link-btn-straight {
+    border-radius: 0;
+}
+
+.link-btn-round {
+    border-radius: 50px;
+}
+
+.link-btn-rounded {
+    border-radius: .4rem;
+}
+
+.link-avatar-straight {
+    border-radius: 0;
+}
+
+.link-avatar-round {
+    border-radius: 50rem;
+}
+
+.link-avatar-rounded {
+    border-radius: .3rem;
+}
+
+.link-hover-animation-smooth {
+    transition: transform 0.3s;
+}
+
+.link-hover-animation-smooth:hover, .link-hover-animation-instant:hover {
+    transform: scale(1.025);
+}
+
+.link-hover-animation-smooth:active, .link-hover-animation-instant:active {
+    transform: scale(.975);
+}
+
+.link-btn-image-wrapper {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    max-width: 45px;
+    max-height: 45px;
+    position: absolute;
+    top: 50%;
+    margin-top: -22.5px;
+    margin-left: -4.1rem;
+}
+
+[dir="rtl"] .link-btn-image-wrapper {
+    margin-left: initial;
+    margin-right: -4.1rem;
+}
+
+/* Big link */
+.link-big-btn {
+    padding: 1rem;
+}
+
+.link-big-btn-image-wrapper {
+    overflow: hidden;
+    width: 25%;
+    height: auto;
+    max-height: 7rem;
+}
+
+.link-big-btn-image {
+    width: 100%;
+    height: auto;
+    max-height: 7rem;
+    object-fit: contain;
+}
+
+.link-big-content-wrapper {
+    width: 100%;
+}
+
+.link-big-icon-wrapper {
+    width: 10%;
+}
+
+
+.link-grid-image-wrapper {
+    position: relative;
+    width: 100%;
+    background: transparent;
+    border-radius: .25rem;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+}
+
+.link-grid-image-wrapper-columns-2 {
+    height: 10rem;
+}
+
+.link-grid-image-wrapper-columns-3 {
+    height: 6rem;
+}
+
+@media (min-width: 992px) {
+    .link-grid-image-wrapper-columns-2 {
+        height: 20rem;
+    }
+
+    .link-grid-image-wrapper-columns-3 {
+        height: 10rem;
+    }
+}
+
+.link-grid-image-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    background: rgba(0, 0, 0, .25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .25rem 1rem;
+}
+
+.link-grid-image-overlay-text {
+    color: white;
+    font-size: 1.1rem;
+}
+
+.link-btn-image {
+    width: 100%;
+    height: auto;
+}
+
+.link-external-item-image {
+    width: 100%;
+    height: auto;
+    max-height: 10rem;
+    object-fit: cover;
+}
+
+.link-iframe-round {
+    border-radius: .3rem;
+    overflow:hidden;
+    position:relative;
+}
+
+.link-round {
+    border-radius: .3rem;
+}
+
+#links > .row > div:target {
+    transform: scale(1.05);
+}
+
+/* Review */
+.link-review-image {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50rem;
+    object-fit: cover;
+    background: hsla(0, 0%, 0%, .1);
+    color: hsla(0, 0%, 0%, 1);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Image slider */
+.link-image-slider-image {
+    object-fit: cover;
+}
+
+/* Faq block */
+.link-faq button {
+    font-size: 1.1rem;
+}
+
+/* Footer */
+.link-footer {
+    margin: 3rem 0;
+}
+
+.link-footer-branding {
+    font-size: .9rem;
+}
+
+/* Modals */
+.modal-header {
+    padding: 1rem;
+    border-bottom: 0;
+}
+
+.modal-subheader {
+    padding: 0 1rem;
+    border-bottom: 0;
+    margin: 0;
+}
+
+.modal-content {
+    padding: 1rem;
+    border: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+/* Other default overrides */
+form .btn-primary {
+    transition: all .3s ease-in-out;
+}
+
+form .btn-primary, form .btn-primary:hover, form .btn-primary:focus, form .btn-primary:active {
+    background: black !important;
+    border-color: black !important;
+    box-shadow: none !important;
+}
+
+form .btn-primary:hover, form .btn-primary:focus {
+    opacity: .85;
+}
+
+form .btn-primary:active {
+    opacity: .75;
+}
+
+.btn:focus, .btn:active {
+    box-shadow: none !important;
+}
+
+/* Modal changes */
+.modal-backdrop {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1 !important;
+}
+
+/* Share button */
+.share-button-wrapper {
+    z-index: 2;
+    top: 1rem;
+    right: 1rem;
+}
+
+.share-button {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background-color: #0003;
+    color: white;
+}
+
+.share-button:hover {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: white;
+}
+

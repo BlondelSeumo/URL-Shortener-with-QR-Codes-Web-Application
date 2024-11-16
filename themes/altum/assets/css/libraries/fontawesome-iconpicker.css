@@ -1,0 +1,124 @@
+.iconpicker-popover.popover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  max-width: none;
+  padding: 1px;
+  text-align: left;
+  width: 240px;
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  z-index: 9;
+}
+.iconpicker-popover.popover.top,
+.iconpicker-popover.popover.topLeftCorner,
+.iconpicker-popover.popover.topLeft,
+.iconpicker-popover.popover.topRight,
+.iconpicker-popover.popover.topRightCorner {
+  margin-top: -10px;
+}
+.iconpicker-popover.popover.right,
+.iconpicker-popover.popover.rightTop,
+.iconpicker-popover.popover.rightBottom {
+  margin-left: 10px;
+}
+.iconpicker-popover.popover.bottom,
+.iconpicker-popover.popover.bottomRightCorner,
+.iconpicker-popover.popover.bottomRight,
+.iconpicker-popover.popover.bottomLeft,
+.iconpicker-popover.popover.bottomLeftCorner {
+  margin-top: 10px;
+}
+.iconpicker-popover.popover.left,
+.iconpicker-popover.popover.leftBottom,
+.iconpicker-popover.popover.leftTop {
+  margin-left: -10px;
+}
+.dropdown-menu.iconpicker-container {
+  padding: 0;
+}
+.iconpicker-popover.popover .popover-title {
+  padding: .5rem;
+  font-size: .9rem;
+  line-height: 15px;
+  background-color: var(--gray-50);
+}
+.iconpicker-popover.popover .popover-content {
+  padding: 0px;
+  text-align: center;
+}
+.iconpicker {
+  position: relative;
+  text-align: left;
+  text-shadow: none;
+  line-height: 0;
+  display: block;
+  margin: 0;
+  overflow: hidden;
+}
+.iconpicker * {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  position: relative;
+}
+.iconpicker:before,
+.iconpicker:after {
+  content: " ";
+  display: table;
+}
+.iconpicker:after {
+  clear: both;
+}
+.iconpicker .iconpicker-items {
+  position: relative;
+  clear: both;
+  float: none;
+  padding: .5rem 0 0 .5rem;
+  background: var(--gray-50);
+  margin: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  min-height: 50px;
+  max-height: 250px;
+}
+.iconpicker .iconpicker-items::-webkit-scrollbar {
+  width: 6px;
+}
+
+.iconpicker .iconpicker-items::-webkit-scrollbar-track {
+  width: 6px;
+}
+
+.iconpicker .iconpicker-items::-webkit-scrollbar-thumb {
+  background: var(--gray-300);
+  border-radius: 10px;
+}
+.iconpicker .iconpicker-items:before,
+.iconpicker .iconpicker-items:after {
+  content: " ";
+  display: table;
+}
+.iconpicker .iconpicker-items:after {
+  clear: both;
+}
+.iconpicker .iconpicker-item {
+  float: left;
+  width: 14px;
+  height: 14px;
+  padding: 12px;
+  margin: 0 12px 12px 0;
+  text-align: center;
+  cursor: pointer;
+  border-radius: .25rem;
+  border: 1px solid var(--gray-200);
+  font-size: 14px;
+  color: inherit;
+}
+.iconpicker .iconpicker-item:hover:not(.iconpicker-selected) {
+  background-color: var(--gray-200);
+}
+.iconpicker-component {
+  cursor: pointer;
+}

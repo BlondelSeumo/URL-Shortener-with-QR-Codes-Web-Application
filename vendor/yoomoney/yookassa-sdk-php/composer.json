@@ -1,0 +1,63 @@
+{
+  "name": "yoomoney/yookassa-sdk-php",
+  "description": "This is a developer tool for integration with YooMoney.",
+  "type": "library",
+  "license": "MIT",
+  "homepage": "https://yookassa.ru/developers/api",
+  "keywords": ["yoomoney", "yookassa", "payments", "api", "sdk"],
+  "authors": [
+    {
+      "name": "YooMoney",
+      "email": "cms@yoomoney.ru"
+    }
+  ],
+  "dist": {
+    "type": "zip",
+    "url": "https://git.yoomoney.ru/rest/api/latest/projects/SDK/repos/yookassa-sdk-php/archive?at=refs%2Ftags%2F2.11.1&format=zip"
+  },
+  "version": "2.11.1",
+  "require": {
+    "php": ">=5.3.0",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-mbstring": "*",
+    "psr/log": "^1.0"
+  },
+  "require-dev": {
+    "ext-xml": "*",
+    "phpunit/phpunit": "^4.8 || ^5.7",
+    "mockery/mockery": "^0.9 || ^1.6",
+    "php-parallel-lint/php-parallel-lint": "^1.0",
+    "phpmd/phpmd": "^2.13",
+    "squizlabs/php_codesniffer": "*"
+  },
+  "scripts": {
+    "test": [
+      "@phpunit",
+      "@phpcbf",
+      "@phpcs",
+      "@phpmd"
+    ],
+    "ci": [
+      "@phplint",
+      "@phpunit",
+      "@phpcs",
+      "@phpmd"
+    ],
+    "phplint": "vendor/bin/parallel-lint --exclude vendor/ --exclude .idea/ --exclude tests/ -e php .",
+    "phpunit": "vendor/bin/phpunit -dmemory_limit=-1 -derror_reporting=32759 --configuration=phpunit.xml.dist --no-coverage",
+    "phpcs": "vendor/bin/phpcs --ignore=vendor/,.idea/,tests/ --standard=phpcs.xml --extensions=php --report=full .",
+    "phpcbf": "vendor/bin/phpcbf --ignore=vendor/,.idea/,tests/ --standard=phpcs.xml --extensions=php .",
+    "phpmd": "vendor/bin/phpmd --exclude vendor/,.idea/,tests/ --suffixes php . text phpmd.xml"
+  },
+  "autoload": {
+    "psr-4": {
+      "YooKassa\\": "lib/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\YooKassa\\": "tests/"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+Options -Indexes
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+
+RewriteRule ^(.+)$ index.php?altum=$1 [QSA,L]
+
+<IfModule mod_expires.c>
+    <filesMatch ".(gif|ico|jpg|jpeg|png|svg|webp)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </filesMatch>
+
+    <filesMatch ".(js|css)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </filesMatch>
+</IfModule>
+
+<IfModule mod_headers.c>
+    <Files ~ "sw\.js">
+        Header set Service-Worker-Allowed: /
+    </Files>
+</IfModule>
